@@ -1,0 +1,818 @@
+2022-03-13 18:01:29.201 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:15:51.778 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:16:54.844 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:17:28.813 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:19:19.186 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:19:21.318 +05:30 [INF] Executed DbCommand (554ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [EcommApiDB];
+2022-03-13 18:19:21.510 +05:30 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [EcommApiDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-03-13 18:19:21.570 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:19:21.880 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-03-13 18:19:21.884 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:19:21.927 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:19:21.938 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-03-13 18:19:21.970 +05:30 [INF] Applying migration '20220313124729_M1'.
+2022-03-13 18:19:22.077 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Category] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Date of Creation] nvarchar(max) NULL,
+    CONSTRAINT [PK_Category] PRIMARY KEY ([ID])
+);
+2022-03-13 18:19:22.079 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [City] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_City] PRIMARY KEY ([ID])
+);
+2022-03-13 18:19:22.082 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Specifications] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Details] nvarchar(100) NULL,
+    CONSTRAINT [PK_Specifications] PRIMARY KEY ([ID])
+);
+2022-03-13 18:19:22.084 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [State] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_State] PRIMARY KEY ([ID])
+);
+2022-03-13 18:19:22.086 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [ID] int NOT NULL IDENTITY,
+    [First Name] nvarchar(30) NOT NULL,
+    [Last Name] nvarchar(30) NULL,
+    [Contact] nvarchar(10) NOT NULL,
+    [Email ID] nvarchar(254) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([ID])
+);
+2022-03-13 18:19:22.089 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(300) NULL,
+    [Price] real NOT NULL,
+    [Count] int NOT NULL,
+    [CategoryId] int NULL,
+    CONSTRAINT [PK_Product] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([ID])
+);
+2022-03-13 18:19:22.092 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [ID] int NOT NULL IDENTITY,
+    [House Number] int NOT NULL,
+    [Building Name] nvarchar(50) NOT NULL,
+    [AreaOrColony Name] nvarchar(100) NOT NULL,
+    [Type] nvarchar(10) NULL,
+    [Pincode] int NOT NULL,
+    [CityId] int NULL,
+    [StateId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Address_City_CityId] FOREIGN KEY ([CityId]) REFERENCES [City] ([ID]),
+    CONSTRAINT [FK_Address_State_StateId] FOREIGN KEY ([StateId]) REFERENCES [State] ([ID]),
+    CONSTRAINT [FK_Address_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:19:22.095 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart] (
+    [ID] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [Price] real NOT NULL,
+    CONSTRAINT [PK_Cart] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:19:22.114 +05:30 [ERR] Failed executing DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [ProductId] int NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [Date of Comment] nvarchar(max) NULL,
+    [ParentCommentId] int NULL,
+    [CommentsCommentId] int NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Comments_CommentsCommentId] FOREIGN KEY ([CommentsCommentId]) REFERENCES [Comments] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:25:16.385 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:25:17.178 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:25:17.225 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:25:17.230 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:25:17.231 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:25:17.260 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-03-13 18:25:17.289 +05:30 [INF] Applying migration '20220313124729_M1'.
+2022-03-13 18:25:17.463 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Category] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Date of Creation] nvarchar(max) NULL,
+    CONSTRAINT [PK_Category] PRIMARY KEY ([ID])
+);
+2022-03-13 18:25:17.467 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [City] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_City] PRIMARY KEY ([ID])
+);
+2022-03-13 18:25:17.475 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Specifications] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Details] nvarchar(100) NULL,
+    CONSTRAINT [PK_Specifications] PRIMARY KEY ([ID])
+);
+2022-03-13 18:25:17.481 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [State] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_State] PRIMARY KEY ([ID])
+);
+2022-03-13 18:25:17.518 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [ID] int NOT NULL IDENTITY,
+    [First Name] nvarchar(30) NOT NULL,
+    [Last Name] nvarchar(30) NULL,
+    [Contact] nvarchar(10) NOT NULL,
+    [Email ID] nvarchar(254) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([ID])
+);
+2022-03-13 18:25:17.525 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(300) NULL,
+    [Price] real NOT NULL,
+    [Count] int NOT NULL,
+    [CategoryId] int NULL,
+    CONSTRAINT [PK_Product] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([ID])
+);
+2022-03-13 18:25:17.530 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [ID] int NOT NULL IDENTITY,
+    [House Number] int NOT NULL,
+    [Building Name] nvarchar(50) NOT NULL,
+    [AreaOrColony Name] nvarchar(100) NOT NULL,
+    [Type] nvarchar(10) NULL,
+    [Pincode] int NOT NULL,
+    [CityId] int NULL,
+    [StateId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Address_City_CityId] FOREIGN KEY ([CityId]) REFERENCES [City] ([ID]),
+    CONSTRAINT [FK_Address_State_StateId] FOREIGN KEY ([StateId]) REFERENCES [State] ([ID]),
+    CONSTRAINT [FK_Address_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:25:17.561 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart] (
+    [ID] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [Price] real NOT NULL,
+    CONSTRAINT [PK_Cart] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:25:17.580 +05:30 [ERR] Failed executing DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [ProductId] int NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [Date of Comment] nvarchar(max) NULL,
+    [ParentCommentId] int NULL,
+    [CommentsCommentId] int NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Comments_CommentsCommentId] FOREIGN KEY ([CommentsCommentId]) REFERENCES [Comments] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:28:18.402 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:28:19.386 +05:30 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:28:19.442 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:28:19.448 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:28:19.449 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:28:19.474 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-03-13 18:28:19.495 +05:30 [INF] Applying migration '20220313124729_M1'.
+2022-03-13 18:28:19.631 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Category] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Date of Creation] nvarchar(max) NULL,
+    CONSTRAINT [PK_Category] PRIMARY KEY ([ID])
+);
+2022-03-13 18:28:19.633 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [City] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_City] PRIMARY KEY ([ID])
+);
+2022-03-13 18:28:19.637 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Specifications] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Details] nvarchar(100) NULL,
+    CONSTRAINT [PK_Specifications] PRIMARY KEY ([ID])
+);
+2022-03-13 18:28:19.639 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [State] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_State] PRIMARY KEY ([ID])
+);
+2022-03-13 18:28:19.642 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [ID] int NOT NULL IDENTITY,
+    [First Name] nvarchar(30) NOT NULL,
+    [Last Name] nvarchar(30) NULL,
+    [Contact] nvarchar(10) NOT NULL,
+    [Email ID] nvarchar(254) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([ID])
+);
+2022-03-13 18:28:19.647 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(300) NULL,
+    [Price] real NOT NULL,
+    [Count] int NOT NULL,
+    [CategoryId] int NULL,
+    CONSTRAINT [PK_Product] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([ID])
+);
+2022-03-13 18:28:19.652 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [ID] int NOT NULL IDENTITY,
+    [House Number] int NOT NULL,
+    [Building Name] nvarchar(50) NOT NULL,
+    [AreaOrColony Name] nvarchar(100) NOT NULL,
+    [Type] nvarchar(10) NULL,
+    [Pincode] int NOT NULL,
+    [CityId] int NULL,
+    [StateId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Address_City_CityId] FOREIGN KEY ([CityId]) REFERENCES [City] ([ID]),
+    CONSTRAINT [FK_Address_State_StateId] FOREIGN KEY ([StateId]) REFERENCES [State] ([ID]),
+    CONSTRAINT [FK_Address_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:28:19.656 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart] (
+    [ID] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [Price] real NOT NULL,
+    CONSTRAINT [PK_Cart] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:28:19.661 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [ProductId] int NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [Date of Comment] nvarchar(max) NULL,
+    [ParentCommentId] int NULL,
+    [CommentsCommentId] int NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Comments_CommentsCommentId] FOREIGN KEY ([CommentsCommentId]) REFERENCES [Comments] ([Id]),
+    CONSTRAINT [FK_Comments_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:28:19.664 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product Specification] (
+    [ID] int NOT NULL IDENTITY,
+    [SpecificationId] int NULL,
+    [ProductId] int NULL,
+    CONSTRAINT [PK_Product Specification] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product Specification_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Product Specification_Specifications_SpecificationId] FOREIGN KEY ([SpecificationId]) REFERENCES [Specifications] ([ID])
+);
+2022-03-13 18:28:19.669 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart Products] (
+    [ID] int NOT NULL IDENTITY,
+    [CartId] int NULL,
+    [ProductId] int NOT NULL,
+    [Count] int NOT NULL,
+    CONSTRAINT [PK_Cart Products] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart Products_Cart_CartId] FOREIGN KEY ([CartId]) REFERENCES [Cart] ([ID]),
+    CONSTRAINT [FK_Cart Products_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]) ON DELETE CASCADE
+);
+2022-03-13 18:28:19.674 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Order] (
+    [ID] int NOT NULL IDENTITY,
+    [OrderDate] datetime2 NOT NULL,
+    [CartId] int NULL,
+    [AddressId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Order] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Order_Address_AddressId] FOREIGN KEY ([AddressId]) REFERENCES [Address] ([ID]),
+    CONSTRAINT [FK_Order_Cart_CartId] FOREIGN KEY ([CartId]) REFERENCES [Cart] ([ID]),
+    CONSTRAINT [FK_Order_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:28:19.678 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_CityId] ON [Address] ([CityId]);
+2022-03-13 18:28:19.680 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_StateId] ON [Address] ([StateId]);
+2022-03-13 18:28:19.682 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_UserId] ON [Address] ([UserId]);
+2022-03-13 18:28:19.683 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart_UserId] ON [Cart] ([UserId]);
+2022-03-13 18:28:19.685 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart Products_CartId] ON [Cart Products] ([CartId]);
+2022-03-13 18:28:19.689 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart Products_ProductId] ON [Cart Products] ([ProductId]);
+2022-03-13 18:28:19.692 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_CommentsCommentId] ON [Comments] ([CommentsCommentId]);
+2022-03-13 18:28:19.694 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_ProductId] ON [Comments] ([ProductId]);
+2022-03-13 18:28:19.695 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_UserId] ON [Comments] ([UserId]);
+2022-03-13 18:28:19.699 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_AddressId] ON [Order] ([AddressId]);
+2022-03-13 18:28:19.701 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_CartId] ON [Order] ([CartId]);
+2022-03-13 18:28:19.703 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_UserId] ON [Order] ([UserId]);
+2022-03-13 18:28:19.704 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product_CategoryId] ON [Product] ([CategoryId]);
+2022-03-13 18:28:19.706 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product Specification_ProductId] ON [Product Specification] ([ProductId]);
+2022-03-13 18:28:19.709 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product Specification_SpecificationId] ON [Product Specification] ([SpecificationId]);
+2022-03-13 18:28:19.715 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220313124729_M1', N'6.0.2');
+2022-03-13 18:30:05.671 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:31:01.776 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:32:09.480 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:32:10.734 +05:30 [INF] Executed DbCommand (398ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [EcommApiDB];
+2022-03-13 18:32:10.923 +05:30 [INF] Executed DbCommand (175ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [EcommApiDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-03-13 18:32:10.994 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:32:11.369 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-03-13 18:32:11.374 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:32:11.448 +05:30 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:32:11.465 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-03-13 18:32:11.531 +05:30 [INF] Applying migration '20220313130102_M1'.
+2022-03-13 18:32:11.782 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Category] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Date of Creation] nvarchar(max) NULL,
+    CONSTRAINT [PK_Category] PRIMARY KEY ([ID])
+);
+2022-03-13 18:32:11.788 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [City] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_City] PRIMARY KEY ([ID])
+);
+2022-03-13 18:32:11.793 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Specifications] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Details] nvarchar(100) NULL,
+    CONSTRAINT [PK_Specifications] PRIMARY KEY ([ID])
+);
+2022-03-13 18:32:11.796 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [State] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_State] PRIMARY KEY ([ID])
+);
+2022-03-13 18:32:11.800 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [ID] int NOT NULL IDENTITY,
+    [First Name] nvarchar(30) NOT NULL,
+    [Last Name] nvarchar(30) NULL,
+    [Contact] nvarchar(10) NOT NULL,
+    [Email ID] nvarchar(254) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([ID])
+);
+2022-03-13 18:32:11.808 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(300) NULL,
+    [Price] real NOT NULL,
+    [Count] int NOT NULL,
+    [CategoryId] int NULL,
+    CONSTRAINT [PK_Product] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([ID])
+);
+2022-03-13 18:32:11.814 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [ID] int NOT NULL IDENTITY,
+    [House Number] int NOT NULL,
+    [Building Name] nvarchar(50) NOT NULL,
+    [AreaOrColony Name] nvarchar(100) NOT NULL,
+    [Type] nvarchar(10) NULL,
+    [Pincode] int NOT NULL,
+    [CityId] int NULL,
+    [StateId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Address_City_CityId] FOREIGN KEY ([CityId]) REFERENCES [City] ([ID]),
+    CONSTRAINT [FK_Address_State_StateId] FOREIGN KEY ([StateId]) REFERENCES [State] ([ID]),
+    CONSTRAINT [FK_Address_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:32:11.821 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart] (
+    [ID] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [Price] real NOT NULL,
+    CONSTRAINT [PK_Cart] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:32:11.848 +05:30 [ERR] Failed executing DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [ProductId] int NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [Date of Comment] nvarchar(max) NULL,
+    [ParentCommentId] int NULL,
+    [ParentComment] int NULL,
+    [CommentsCommentId] int NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Comments_CommentsCommentId] FOREIGN KEY ([CommentsCommentId]) REFERENCES [Comments] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:35:45.110 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:36:33.438 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:36:34.326 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:36:34.440 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:36:34.455 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:36:34.456 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:36:34.505 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-03-13 18:36:34.550 +05:30 [INF] Applying migration '20220313130545_M1'.
+2022-03-13 18:36:34.763 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Category] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Date of Creation] nvarchar(max) NULL,
+    CONSTRAINT [PK_Category] PRIMARY KEY ([ID])
+);
+2022-03-13 18:36:34.765 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [City] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_City] PRIMARY KEY ([ID])
+);
+2022-03-13 18:36:34.767 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Specifications] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Details] nvarchar(100) NULL,
+    CONSTRAINT [PK_Specifications] PRIMARY KEY ([ID])
+);
+2022-03-13 18:36:34.769 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [State] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_State] PRIMARY KEY ([ID])
+);
+2022-03-13 18:36:34.771 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [ID] int NOT NULL IDENTITY,
+    [First Name] nvarchar(30) NOT NULL,
+    [Last Name] nvarchar(30) NULL,
+    [Contact] nvarchar(10) NOT NULL,
+    [Email ID] nvarchar(254) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([ID])
+);
+2022-03-13 18:36:34.774 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(300) NULL,
+    [Price] real NOT NULL,
+    [Count] int NOT NULL,
+    [CategoryId] int NULL,
+    CONSTRAINT [PK_Product] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([ID])
+);
+2022-03-13 18:36:34.777 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [ID] int NOT NULL IDENTITY,
+    [House Number] int NOT NULL,
+    [Building Name] nvarchar(50) NOT NULL,
+    [AreaOrColony Name] nvarchar(100) NOT NULL,
+    [Type] nvarchar(10) NULL,
+    [Pincode] int NOT NULL,
+    [CityId] int NULL,
+    [StateId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Address_City_CityId] FOREIGN KEY ([CityId]) REFERENCES [City] ([ID]),
+    CONSTRAINT [FK_Address_State_StateId] FOREIGN KEY ([StateId]) REFERENCES [State] ([ID]),
+    CONSTRAINT [FK_Address_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:36:34.780 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart] (
+    [ID] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [Price] real NOT NULL,
+    CONSTRAINT [PK_Cart] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:36:34.782 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [ProductId] int NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [Date of Comment] nvarchar(max) NULL,
+    [ParentCommentId] int NULL,
+    [CommentsCommentId] int NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Comments_CommentsCommentId] FOREIGN KEY ([CommentsCommentId]) REFERENCES [Comments] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Comments_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:36:34.962 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product Specification] (
+    [ID] int NOT NULL IDENTITY,
+    [SpecificationId] int NULL,
+    [ProductId] int NULL,
+    CONSTRAINT [PK_Product Specification] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product Specification_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Product Specification_Specifications_SpecificationId] FOREIGN KEY ([SpecificationId]) REFERENCES [Specifications] ([ID])
+);
+2022-03-13 18:36:34.968 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart Products] (
+    [ID] int NOT NULL IDENTITY,
+    [CartId] int NULL,
+    [ProductId] int NOT NULL,
+    [Count] int NOT NULL,
+    CONSTRAINT [PK_Cart Products] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart Products_Cart_CartId] FOREIGN KEY ([CartId]) REFERENCES [Cart] ([ID]),
+    CONSTRAINT [FK_Cart Products_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]) ON DELETE CASCADE
+);
+2022-03-13 18:36:34.973 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Order] (
+    [ID] int NOT NULL IDENTITY,
+    [OrderDate] datetime2 NOT NULL,
+    [CartId] int NULL,
+    [AddressId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Order] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Order_Address_AddressId] FOREIGN KEY ([AddressId]) REFERENCES [Address] ([ID]),
+    CONSTRAINT [FK_Order_Cart_CartId] FOREIGN KEY ([CartId]) REFERENCES [Cart] ([ID]),
+    CONSTRAINT [FK_Order_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:36:34.978 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_CityId] ON [Address] ([CityId]);
+2022-03-13 18:36:34.979 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_StateId] ON [Address] ([StateId]);
+2022-03-13 18:36:34.981 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_UserId] ON [Address] ([UserId]);
+2022-03-13 18:36:34.984 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart_UserId] ON [Cart] ([UserId]);
+2022-03-13 18:36:34.985 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart Products_CartId] ON [Cart Products] ([CartId]);
+2022-03-13 18:36:34.988 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart Products_ProductId] ON [Cart Products] ([ProductId]);
+2022-03-13 18:36:34.989 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_CommentsCommentId] ON [Comments] ([CommentsCommentId]);
+2022-03-13 18:36:34.991 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_ProductId] ON [Comments] ([ProductId]);
+2022-03-13 18:36:34.993 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_UserId] ON [Comments] ([UserId]);
+2022-03-13 18:36:34.996 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_AddressId] ON [Order] ([AddressId]);
+2022-03-13 18:36:34.997 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_CartId] ON [Order] ([CartId]);
+2022-03-13 18:36:34.999 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_UserId] ON [Order] ([UserId]);
+2022-03-13 18:36:35.000 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product_CategoryId] ON [Product] ([CategoryId]);
+2022-03-13 18:36:35.001 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product Specification_ProductId] ON [Product Specification] ([ProductId]);
+2022-03-13 18:36:35.003 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product Specification_SpecificationId] ON [Product Specification] ([SpecificationId]);
+2022-03-13 18:36:35.005 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220313130545_M1', N'6.0.2');
+2022-03-13 18:39:27.678 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:40:57.539 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-13 18:40:58.563 +05:30 [INF] Executed DbCommand (360ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [EcommApiDB];
+2022-03-13 18:40:58.691 +05:30 [INF] Executed DbCommand (119ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [EcommApiDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-03-13 18:40:58.734 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:40:58.917 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-03-13 18:40:58.920 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-13 18:40:58.956 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-13 18:40:58.964 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-03-13 18:40:58.993 +05:30 [INF] Applying migration '20220313130928_M1'.
+2022-03-13 18:40:59.109 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Category] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Date of Creation] nvarchar(max) NULL,
+    CONSTRAINT [PK_Category] PRIMARY KEY ([ID])
+);
+2022-03-13 18:40:59.111 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [City] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_City] PRIMARY KEY ([ID])
+);
+2022-03-13 18:40:59.114 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Specifications] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Details] nvarchar(100) NULL,
+    CONSTRAINT [PK_Specifications] PRIMARY KEY ([ID])
+);
+2022-03-13 18:40:59.116 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [State] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_State] PRIMARY KEY ([ID])
+);
+2022-03-13 18:40:59.118 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [ID] int NOT NULL IDENTITY,
+    [First Name] nvarchar(30) NOT NULL,
+    [Last Name] nvarchar(30) NULL,
+    [Contact] nvarchar(10) NOT NULL,
+    [Email ID] nvarchar(254) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([ID])
+);
+2022-03-13 18:40:59.121 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(300) NULL,
+    [Price] real NOT NULL,
+    [Count] int NOT NULL,
+    [CategoryId] int NULL,
+    CONSTRAINT [PK_Product] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([ID])
+);
+2022-03-13 18:40:59.125 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [ID] int NOT NULL IDENTITY,
+    [House Number] int NOT NULL,
+    [Building Name] nvarchar(50) NOT NULL,
+    [AreaOrColony Name] nvarchar(100) NOT NULL,
+    [Type] nvarchar(10) NULL,
+    [Pincode] int NOT NULL,
+    [CityId] int NULL,
+    [StateId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Address_City_CityId] FOREIGN KEY ([CityId]) REFERENCES [City] ([ID]),
+    CONSTRAINT [FK_Address_State_StateId] FOREIGN KEY ([StateId]) REFERENCES [State] ([ID]),
+    CONSTRAINT [FK_Address_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:40:59.128 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart] (
+    [ID] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [Price] real NOT NULL,
+    CONSTRAINT [PK_Cart] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:40:59.132 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [ProductId] int NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [Date of Comment] nvarchar(max) NULL,
+    [ParentCommentId] int NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:40:59.135 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product Specification] (
+    [ID] int NOT NULL IDENTITY,
+    [SpecificationId] int NULL,
+    [ProductId] int NULL,
+    CONSTRAINT [PK_Product Specification] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product Specification_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Product Specification_Specifications_SpecificationId] FOREIGN KEY ([SpecificationId]) REFERENCES [Specifications] ([ID])
+);
+2022-03-13 18:40:59.138 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart Products] (
+    [ID] int NOT NULL IDENTITY,
+    [CartId] int NULL,
+    [ProductId] int NOT NULL,
+    [Count] int NOT NULL,
+    CONSTRAINT [PK_Cart Products] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart Products_Cart_CartId] FOREIGN KEY ([CartId]) REFERENCES [Cart] ([ID]),
+    CONSTRAINT [FK_Cart Products_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]) ON DELETE CASCADE
+);
+2022-03-13 18:40:59.143 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Order] (
+    [ID] int NOT NULL IDENTITY,
+    [OrderDate] datetime2 NOT NULL,
+    [CartId] int NULL,
+    [AddressId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Order] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Order_Address_AddressId] FOREIGN KEY ([AddressId]) REFERENCES [Address] ([ID]),
+    CONSTRAINT [FK_Order_Cart_CartId] FOREIGN KEY ([CartId]) REFERENCES [Cart] ([ID]),
+    CONSTRAINT [FK_Order_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-13 18:40:59.145 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_CityId] ON [Address] ([CityId]);
+2022-03-13 18:40:59.146 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_StateId] ON [Address] ([StateId]);
+2022-03-13 18:40:59.147 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_UserId] ON [Address] ([UserId]);
+2022-03-13 18:40:59.149 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart_UserId] ON [Cart] ([UserId]);
+2022-03-13 18:40:59.150 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart Products_CartId] ON [Cart Products] ([CartId]);
+2022-03-13 18:40:59.153 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart Products_ProductId] ON [Cart Products] ([ProductId]);
+2022-03-13 18:40:59.155 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_ProductId] ON [Comments] ([ProductId]);
+2022-03-13 18:40:59.156 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_UserId] ON [Comments] ([UserId]);
+2022-03-13 18:40:59.157 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_AddressId] ON [Order] ([AddressId]);
+2022-03-13 18:40:59.160 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_CartId] ON [Order] ([CartId]);
+2022-03-13 18:40:59.161 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_UserId] ON [Order] ([UserId]);
+2022-03-13 18:40:59.163 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product_CategoryId] ON [Product] ([CategoryId]);
+2022-03-13 18:40:59.164 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product Specification_ProductId] ON [Product Specification] ([ProductId]);
+2022-03-13 18:40:59.166 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product Specification_SpecificationId] ON [Product Specification] ([SpecificationId]);
+2022-03-13 18:40:59.169 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220313130928_M1', N'6.0.2');

@@ -1,0 +1,1753 @@
+2022-03-15 07:54:45.239 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 07:54:45.698 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 07:54:45.699 +05:30 [INF] Hosting environment: Development
+2022-03-15 07:54:45.699 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 07:54:52.321 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 07:54:54.181 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1947.2176ms
+2022-03-15 07:54:54.367 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 07:54:54.371 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 3.7323ms
+2022-03-15 07:54:54.709 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 07:54:55.142 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 433.3250ms
+2022-03-15 07:55:01.281 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 07:55:01.343 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:55:01.440 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 07:55:02.148 +05:30 [INF] CartController Excuting ....
+2022-03-15 07:55:03.555 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 07:55:06.324 +05:30 [INF] Executed DbCommand (236ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:55:06.682 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:55:06.697 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 07:55:06.736 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 5285.2083ms
+2022-03-15 07:55:06.736 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:55:06.744 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 5462.9624ms
+2022-03-15 07:56:13.464 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 07:56:13.469 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:56:13.469 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 07:56:13.485 +05:30 [INF] CartController Excuting ....
+2022-03-15 07:56:13.489 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 07:56:13.501 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:56:13.504 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 07:56:13.505 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 35.9186ms
+2022-03-15 07:56:13.506 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:56:13.506 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 42.1437ms
+2022-03-15 07:56:44.688 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 07:56:44.736 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 07:56:44.736 +05:30 [INF] Hosting environment: Development
+2022-03-15 07:56:44.736 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 07:56:46.138 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 07:56:46.679 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 546.5475ms
+2022-03-15 07:56:46.680 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 07:56:46.727 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 47.3735ms
+2022-03-15 07:56:47.065 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 07:56:47.294 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 228.5343ms
+2022-03-15 07:56:53.793 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 07:56:53.809 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:56:53.841 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 07:56:54.135 +05:30 [INF] CartController Excuting ....
+2022-03-15 07:56:55.480 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 07:56:56.582 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:56:56.856 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:56:56.871 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 07:56:56.884 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 3033.6526ms
+2022-03-15 07:56:56.885 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:56:56.891 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 3097.9829ms
+2022-03-15 07:57:12.048 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 07:57:12.053 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:57:12.053 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 07:57:12.068 +05:30 [INF] CartController Excuting ....
+2022-03-15 07:57:12.088 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 07:57:12.097 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:57:12.098 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 07:57:12.099 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 45.4548ms
+2022-03-15 07:57:12.099 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:57:12.099 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 51.2831ms
+2022-03-15 07:58:09.768 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 07:58:09.868 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 07:58:09.869 +05:30 [INF] Hosting environment: Development
+2022-03-15 07:58:09.869 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 07:58:11.337 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 07:58:12.020 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 691.0960ms
+2022-03-15 07:58:12.030 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 07:58:12.063 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 32.5291ms
+2022-03-15 07:58:12.458 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 07:58:12.912 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 453.5858ms
+2022-03-15 07:58:18.870 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 07:58:18.879 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:58:18.928 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Object GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 07:58:19.256 +05:30 [INF] CartController Excuting ....
+2022-03-15 07:58:20.535 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 07:58:21.569 +05:30 [INF] Executed DbCommand (75ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:58:21.710 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:58:21.721 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-15 07:58:21.749 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 2810.9332ms
+2022-03-15 07:58:21.750 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:58:21.766 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 2895.8061ms
+2022-03-15 07:58:27.593 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 07:58:27.601 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:58:27.602 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Object GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 07:58:27.636 +05:30 [INF] CartController Excuting ....
+2022-03-15 07:58:27.642 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 07:58:27.651 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:58:27.652 +05:30 [INF] Executing ObjectResult, writing value of type 'null'.
+2022-03-15 07:58:27.652 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 50.4671ms
+2022-03-15 07:58:27.652 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:58:27.653 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 204 0 - 59.4105ms
+2022-03-15 07:58:42.976 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 07:58:42.977 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:58:42.978 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Object GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 07:58:42.983 +05:30 [INF] CartController Excuting ....
+2022-03-15 07:58:43.081 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 07:58:43.084 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:58:43.090 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 07:58:43.091 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-15 07:58:43.092 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 113.608ms
+2022-03-15 07:58:43.092 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 07:58:43.093 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 116.2066ms
+2022-03-15 08:00:20.967 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 08:00:21.047 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:00:21.048 +05:30 [INF] Hosting environment: Development
+2022-03-15 08:00:21.048 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 08:00:22.396 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 08:00:23.019 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 631.0457ms
+2022-03-15 08:00:23.041 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 08:00:23.081 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 40.0223ms
+2022-03-15 08:00:23.368 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 08:00:23.702 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 335.5495ms
+2022-03-15 08:00:32.939 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 08:00:32.953 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 08:00:32.999 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 08:00:33.281 +05:30 [INF] CartController Excuting ....
+2022-03-15 08:00:34.722 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 08:00:36.179 +05:30 [INF] Executed DbCommand (111ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 08:00:36.351 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 08:01:27.864 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 08:01:27.944 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:01:27.945 +05:30 [INF] Hosting environment: Development
+2022-03-15 08:01:27.945 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 08:01:29.138 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 08:01:29.805 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 666.0168ms
+2022-03-15 08:01:29.807 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 08:01:29.816 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 8.8922ms
+2022-03-15 08:01:30.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 08:01:30.415 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 301.7956ms
+2022-03-15 08:01:41.343 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 08:01:41.356 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 08:01:41.396 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 08:01:41.817 +05:30 [INF] CartController Excuting ....
+2022-03-15 08:01:43.401 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 08:01:44.709 +05:30 [INF] Executed DbCommand (68ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 08:01:44.856 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 08:01:44.941 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 08:01:45.196 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 08:01:45.218 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart Products] SET [Count] = @p0, [CartId] = @p1, [ProductId] = @p2
+WHERE [ID] = @p3;
+SELECT @@ROWCOUNT;
+2022-03-15 08:01:45.235 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 08:01:45.255 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 08:01:45.321 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 08:01:45.337 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 08:01:45.355 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 3947.5505ms
+2022-03-15 08:01:45.356 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 08:01:45.362 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 4018.5066ms
+2022-03-15 08:02:56.741 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 08:02:56.746 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 08:02:56.746 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 08:02:56.773 +05:30 [INF] CartController Excuting ....
+2022-03-15 08:02:56.782 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 08:02:56.796 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 08:02:56.804 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 08:02:56.806 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 08:02:56.809 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 08:02:56.810 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart Products] SET [Count] = @p0, [CartId] = @p1, [ProductId] = @p2
+WHERE [ID] = @p3;
+SELECT @@ROWCOUNT;
+2022-03-15 08:02:56.811 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 08:02:56.813 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 08:02:56.816 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 08:02:56.817 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 08:02:56.817 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 70.9509ms
+2022-03-15 08:02:56.818 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 08:02:56.818 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 77.4835ms
+2022-03-15 08:04:22.177 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 08:04:22.269 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:04:22.270 +05:30 [INF] Hosting environment: Development
+2022-03-15 08:04:22.270 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 08:04:23.643 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 08:04:24.133 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 499.4831ms
+2022-03-15 08:04:24.199 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 08:04:24.202 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 3.1072ms
+2022-03-15 08:04:24.531 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 08:04:24.788 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 257.0253ms
+2022-03-15 08:04:35.212 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 08:04:35.228 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 08:04:35.284 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 08:04:35.607 +05:30 [INF] CartController Excuting ....
+2022-03-15 08:04:36.850 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 08:04:37.933 +05:30 [INF] Executed DbCommand (68ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 08:04:37.974 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 08:04:38.110 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 08:04:38.129 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 08:04:38.142 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 2848.7587ms
+2022-03-15 08:04:38.143 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 08:04:38.149 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 2937.7335ms
+2022-03-15 08:05:46.368 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 08:05:46.451 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:05:46.452 +05:30 [INF] Hosting environment: Development
+2022-03-15 08:05:46.452 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 08:05:47.819 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 08:05:48.503 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 08:05:48.508 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 696.3609ms
+2022-03-15 08:05:48.509 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 5.4365ms
+2022-03-15 08:05:48.909 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 08:05:49.262 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 353.0055ms
+2022-03-15 08:05:57.829 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 08:05:57.843 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 08:05:57.912 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 08:05:58.304 +05:30 [INF] CartController Excuting ....
+2022-03-15 08:05:59.886 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 08:06:01.381 +05:30 [INF] Executed DbCommand (78ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 08:06:01.512 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 08:27:04.167 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 08:27:04.244 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:27:04.245 +05:30 [INF] Hosting environment: Development
+2022-03-15 08:27:04.245 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 08:27:05.787 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 08:27:06.514 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 08:27:06.517 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 756.7294ms
+2022-03-15 08:27:06.531 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 16.1122ms
+2022-03-15 08:27:06.907 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 08:27:07.244 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 337.0704ms
+2022-03-15 08:27:15.523 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5176/api/Order/AddOrder - 0
+2022-03-15 08:27:15.533 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-15 08:27:15.587 +05:30 [INF] Route matched with {action = "AddOrder", controller = "Order"}. Executing controller action with signature System.Object AddOrder(Int32, Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-15 08:27:15.902 +05:30 [INF] OrderController Excuting ....
+2022-03-15 08:27:17.188 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 08:27:18.222 +05:30 [INF] Executed DbCommand (75ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userId_0
+2022-03-15 08:27:18.328 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__cart_CartId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE [c].[CartId] = @__cart_CartId_0
+2022-03-15 08:27:18.632 +05:30 [ERR] Failed executing DbCommand (49ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Single), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Order] ([AddressId], [CartId], [OrderDate], [OrderPrice], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [ID]
+FROM [Order]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2022-03-15 08:27:18.932 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'EcommAppDAL.Context.DatabaseContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'OrderPrice'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:1a8962fb-0804-4543-8da2-118aa24ceae6
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__104_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'OrderPrice'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:1a8962fb-0804-4543-8da2-118aa24ceae6
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__104_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2022-03-15 08:27:19.153 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 08:27:19.166 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI) in 3569.0021ms
+2022-03-15 08:27:19.166 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-15 08:27:19.172 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5176/api/Order/AddOrder - 0 - 200 - application/json;+charset=utf-8 3648.6975ms
+2022-03-15 08:29:18.413 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 08:29:18.483 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:29:18.483 +05:30 [INF] Hosting environment: Development
+2022-03-15 08:29:18.484 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 08:29:19.986 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 08:29:20.638 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 665.4753ms
+2022-03-15 08:29:20.669 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 08:29:20.720 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 51.0103ms
+2022-03-15 08:29:21.050 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 08:29:21.400 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 349.8061ms
+2022-03-15 08:29:27.597 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - -
+2022-03-15 08:29:27.621 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-15 08:29:27.653 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Order"}. Executing controller action with signature System.Collections.Generic.List`1[EcommAppBLL.ModelViews.OrderView] GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-15 08:29:27.960 +05:30 [INF] OrderController Excuting ....
+2022-03-15 08:29:29.147 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 08:29:30.184 +05:30 [ERR] Failed executing DbCommand (67ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[OrderPrice], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-15 08:29:30.249 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'EcommAppDAL.Context.DatabaseContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'OrderPrice'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:ea054f45-c236-46ca-a635-19e582c3acac
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'OrderPrice'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:ea054f45-c236-46ca-a635-19e582c3acac
+Error Number:207,State:1,Class:16
+2022-03-15 08:31:45.136 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 08:31:45.212 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:31:45.213 +05:30 [INF] Hosting environment: Development
+2022-03-15 08:31:45.213 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 08:31:46.526 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 08:31:47.233 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 715.4182ms
+2022-03-15 08:31:47.279 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 08:31:47.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 43.2552ms
+2022-03-15 08:31:47.649 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 08:31:47.993 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 343.0749ms
+2022-03-15 08:31:55.043 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Product/ProductSpecification - -
+2022-03-15 08:31:55.059 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI)'
+2022-03-15 08:31:55.078 +05:30 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[EcommAppBLL.ModelViews.ProductSpecificationView] GetAll() on controller EcommAppAPI.Controllers.ProductController (EcommAppAPI).
+2022-03-15 08:31:55.395 +05:30 [INF] ProductController Excuting ....
+2022-03-15 08:31:56.667 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 08:31:57.688 +05:30 [INF] Executed DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[SpecificationId], (
+    SELECT TOP(1) [p0].[Name]
+    FROM [Product] AS [p0]
+    WHERE [p0].[ID] = [p].[ProductId]) AS [ProductName], (
+    SELECT TOP(1) [s].[Name]
+    FROM [Specifications] AS [s]
+    WHERE [s].[ID] = [p].[SpecificationId]) AS [SpecificationName], (
+    SELECT TOP(1) [s0].[Details]
+    FROM [Specifications] AS [s0]
+    WHERE [s0].[ID] = [p].[SpecificationId]) AS [SpecificationDetail]
+FROM [Product Specification] AS [p]
+2022-03-15 08:31:57.734 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.ProductSpecificationView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-15 08:31:57.758 +05:30 [INF] Executed action EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI) in 2662.0879ms
+2022-03-15 08:31:57.760 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI)'
+2022-03-15 08:31:57.773 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Product/ProductSpecification - - - 200 - application/json;+charset=utf-8 2729.5539ms
+<<<<<<< HEAD
+2022-03-15 10:28:50.264 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:28:50.374 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:28:50.375 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:28:50.376 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:28:53.607 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:28:54.457 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:28:54.461 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 851.6394ms
+2022-03-15 10:28:54.463 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 5.9697ms
+2022-03-15 10:28:54.920 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 10:28:55.272 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 351.2967ms
+2022-03-15 10:32:09.332 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:32:09.405 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:32:09.406 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:32:09.406 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:32:11.329 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:32:12.000 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 682.3053ms
+2022-03-15 10:32:12.133 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:32:12.137 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 3.3193ms
+2022-03-15 10:32:12.478 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 10:32:12.736 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Product" for actions - EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI),EcommAppAPI.Controllers.ProductController.GetProductByCategoryName (EcommAppAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-15 10:32:12.870 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 392.2407ms
+2022-03-15 10:33:30.769 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:33:30.889 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:33:30.890 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:33:30.890 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:33:33.163 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:33:34.047 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 906.3415ms
+2022-03-15 10:33:34.261 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:33:34.268 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 6.9640ms
+2022-03-15 10:33:34.576 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 10:33:34.901 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Product" for actions - EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI),EcommAppAPI.Controllers.ProductController.GetProductByCategoryName (EcommAppAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-15 10:33:35.093 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 517.5997ms
+2022-03-15 10:34:27.873 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:34:27.998 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:34:27.999 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:34:27.999 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:34:29.953 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:34:30.708 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 763.8870ms
+2022-03-15 10:34:30.786 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:34:30.789 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 2.9925ms
+2022-03-15 10:34:31.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 10:34:31.435 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 322.0233ms
+2022-03-15 10:34:54.726 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Product/byName/Shoes - -
+2022-03-15 10:34:54.753 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.ProductController.GetProductByCategoryName (EcommAppAPI)'
+2022-03-15 10:34:54.812 +05:30 [INF] Route matched with {action = "GetProductByCategoryName", controller = "Product"}. Executing controller action with signature System.Collections.Generic.List`1[EcommAppBLL.ModelViews.ProductView] GetProductByCategoryName(System.String) on controller EcommAppAPI.Controllers.ProductController (EcommAppAPI).
+2022-03-15 10:34:57.083 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:34:58.589 +05:30 [INF] Executed DbCommand (139ms) [Parameters=[@__catname_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Date of Creation], [c].[Name]
+FROM [Category] AS [c]
+WHERE [c].[Name] = @__catname_0
+2022-03-15 10:34:59.135 +05:30 [INF] Executed DbCommand (65ms) [Parameters=[@__category_CategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ID] AS [ProductId], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Count] AS [ProductCount], [p].[Price] AS [ProductPrice], [p].[CategoryId]
+FROM [Product] AS [p]
+WHERE [p].[CategoryId] = @__category_CategoryId_0
+2022-03-15 10:34:59.149 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.ProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-15 10:34:59.164 +05:30 [INF] Executed action EcommAppAPI.Controllers.ProductController.GetProductByCategoryName (EcommAppAPI) in 4342.5557ms
+2022-03-15 10:34:59.165 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.ProductController.GetProductByCategoryName (EcommAppAPI)'
+2022-03-15 10:34:59.179 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Product/byName/Shoes - - - 200 - application/json;+charset=utf-8 4453.4230ms
+2022-03-15 10:36:25.139 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:36:25.292 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:36:25.294 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:36:25.294 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:36:29.274 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:36:31.327 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 2072.5157ms
+2022-03-15 10:36:31.633 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:36:31.637 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 3.5257ms
+2022-03-15 10:36:31.869 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 10:36:32.308 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 439.0623ms
+2022-03-15 10:36:52.547 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Product/byCategoryName/Electronics - -
+2022-03-15 10:36:52.577 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.ProductController.GetProductByCategoryName (EcommAppAPI)'
+2022-03-15 10:36:52.623 +05:30 [INF] Route matched with {action = "GetProductByCategoryName", controller = "Product"}. Executing controller action with signature System.Collections.Generic.List`1[EcommAppBLL.ModelViews.ProductView] GetProductByCategoryName(System.String) on controller EcommAppAPI.Controllers.ProductController (EcommAppAPI).
+2022-03-15 10:36:54.589 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:36:55.895 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[@__categoryname_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Date of Creation], [c].[Name]
+FROM [Category] AS [c]
+WHERE [c].[Name] = @__categoryname_0
+2022-03-15 10:36:56.069 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__category_CategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ID] AS [ProductId], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Count] AS [ProductCount], [p].[Price] AS [ProductPrice], [p].[CategoryId]
+FROM [Product] AS [p]
+WHERE [p].[CategoryId] = @__category_CategoryId_0
+2022-03-15 10:36:56.091 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.ProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-15 10:36:56.109 +05:30 [INF] Executed action EcommAppAPI.Controllers.ProductController.GetProductByCategoryName (EcommAppAPI) in 3478.415ms
+2022-03-15 10:36:56.110 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.ProductController.GetProductByCategoryName (EcommAppAPI)'
+2022-03-15 10:36:56.118 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Product/byCategoryName/Electronics - - - 200 - application/json;+charset=utf-8 3571.8377ms
+2022-03-15 10:37:09.764 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:37:09.770 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:37:09.775 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Object GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:37:09.805 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:37:09.814 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:37:09.860 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:37:09.962 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+=======
+2022-03-15 10:30:56.206 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:30:56.263 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:30:56.264 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:30:56.264 +05:30 [INF] Content root path: C:\Users\ishsandh\Downloads\FinalMockProject\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:30:57.721 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:30:58.496 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 783.7832ms
+2022-03-15 10:30:58.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:30:58.538 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 3.0493ms
+2022-03-15 10:30:58.736 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 10:30:59.117 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 381.1592ms
+2022-03-15 10:31:28.027 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:31:28.041 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:31:28.107 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:31:28.655 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:31:30.539 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:31:33.963 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:31:34.120 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:31:34.131 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:31:34.151 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 6032.762ms
+2022-03-15 10:31:34.151 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:31:34.156 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 6134.7386ms
+2022-03-15 10:32:20.802 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:32:20.807 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:32:20.809 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:32:20.819 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:32:20.821 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:32:20.827 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:32:20.834 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:32:20.865 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:32:21.040 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 10:32:21.054 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Cart Products] ([Count], [CartId], [ProductId])
+VALUES (@p0, @p1, @p2);
+SELECT [ID]
+FROM [Cart Products]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2022-03-15 10:32:21.091 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 10:32:21.112 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:32:21.115 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:32:21.117 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:32:21.118 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 308.7959ms
+2022-03-15 10:32:21.118 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:32:21.119 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 316.0683ms
+2022-03-15 10:32:32.144 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:32:32.144 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:32:32.144 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:32:32.149 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:32:32.221 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:32:32.223 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:32:32.224 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:32:32.224 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:32:32.224 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 79.4301ms
+2022-03-15 10:32:32.224 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:32:32.224 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 80.3656ms
+2022-03-15 10:35:46.035 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:35:46.036 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:35:46.036 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:35:46.040 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:35:46.041 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:35:46.041 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:35:46.048 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:35:46.050 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:35:46.053 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 10:35:46.055 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Cart Products] ([Count], [CartId], [ProductId])
+VALUES (@p0, @p1, @p2);
+SELECT [ID]
+FROM [Cart Products]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2022-03-15 10:35:46.057 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 10:35:46.063 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:35:46.065 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+>>>>>>> ede7160f02819b8a2908022cbc70ad364fdd3b4b
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+<<<<<<< HEAD
+2022-03-15 10:37:09.964 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-15 10:37:09.967 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 191.6401ms
+2022-03-15 10:37:09.968 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:37:09.968 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 203.4555ms
+2022-03-15 10:38:19.800 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:38:19.804 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:38:19.808 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:38:19.810 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:38:19.909 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:38:19.920 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:38:19.925 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:38:19.958 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:38:20.195 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+=======
+2022-03-15 10:35:46.066 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:35:46.067 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 29.0654ms
+2022-03-15 10:35:46.067 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:35:46.068 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 32.2409ms
+2022-03-15 10:35:56.457 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:35:56.457 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:35:56.457 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:35:56.458 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:35:56.460 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:35:56.461 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:35:56.464 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:35:56.465 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:35:56.465 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 7.214ms
+2022-03-15 10:35:56.465 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:35:56.465 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 7.9672ms
+2022-03-15 10:36:17.391 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:36:17.392 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:36:17.392 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:36:17.392 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:36:17.393 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:36:17.394 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:36:17.395 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:36:17.395 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:36:17.401 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+>>>>>>> ede7160f02819b8a2908022cbc70ad364fdd3b4b
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+<<<<<<< HEAD
+2022-03-15 10:38:20.200 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+=======
+2022-03-15 10:36:17.404 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+>>>>>>> ede7160f02819b8a2908022cbc70ad364fdd3b4b
+SET NOCOUNT ON;
+UPDATE [Cart Products] SET [Count] = @p0, [CartId] = @p1, [ProductId] = @p2
+WHERE [ID] = @p3;
+SELECT @@ROWCOUNT;
+<<<<<<< HEAD
+2022-03-15 10:38:20.208 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+=======
+2022-03-15 10:36:17.405 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+>>>>>>> ede7160f02819b8a2908022cbc70ad364fdd3b4b
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+<<<<<<< HEAD
+2022-03-15 10:38:20.234 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:38:20.242 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+=======
+2022-03-15 10:36:17.406 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:36:17.408 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+>>>>>>> ede7160f02819b8a2908022cbc70ad364fdd3b4b
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+<<<<<<< HEAD
+2022-03-15 10:38:20.243 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:38:20.245 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 437.0845ms
+2022-03-15 10:38:20.245 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:38:20.246 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 445.4538ms
+2022-03-15 10:38:25.328 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:38:25.329 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:38:25.329 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Object GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:38:25.334 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:38:25.338 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:38:25.339 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:38:25.341 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+=======
+2022-03-15 10:36:17.408 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:36:17.408 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 16.4878ms
+2022-03-15 10:36:17.408 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:36:17.408 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 17.2318ms
+2022-03-15 10:36:23.795 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:36:23.795 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:36:23.795 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:36:23.796 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:36:23.796 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:36:23.797 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:36:23.800 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+>>>>>>> ede7160f02819b8a2908022cbc70ad364fdd3b4b
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [c].[Price] AS [CartPrice], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+<<<<<<< HEAD
+2022-03-15 10:38:25.341 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-15 10:38:25.342 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 12.6632ms
+2022-03-15 10:38:25.342 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:38:25.342 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 13.9719ms
+=======
+2022-03-15 10:36:23.801 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:36:23.801 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 5.5479ms
+2022-03-15 10:36:23.801 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:36:23.801 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 6.3822ms
+2022-03-15 10:37:49.969 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:37:50.038 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:37:50.039 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:37:50.039 +05:30 [INF] Content root path: C:\Users\ishsandh\Downloads\FinalMockProject\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:37:51.932 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:37:52.807 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 885.1189ms
+2022-03-15 10:37:52.853 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:37:52.905 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 51.3477ms
+2022-03-15 10:38:24.229 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:38:24.305 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:38:24.306 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:38:24.306 +05:30 [INF] Content root path: C:\Users\ishsandh\Downloads\FinalMockProject\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:38:26.544 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:38:27.305 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:38:27.310 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 4.2490ms
+2022-03-15 10:38:27.335 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 778.5818ms
+2022-03-15 10:38:27.903 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 10:38:28.367 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 464.0751ms
+2022-03-15 10:38:50.822 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/RemoveFromCart - 0
+2022-03-15 10:38:50.829 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.RemoveProductInCart (EcommAppAPI)'
+2022-03-15 10:38:50.860 +05:30 [INF] Route matched with {action = "RemoveProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage RemoveProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:38:51.083 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:38:52.006 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:38:52.942 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:38:53.036 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:38:53.070 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:38:53.213 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 10:38:53.218 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart Products] SET [Count] = @p0, [CartId] = @p1, [ProductId] = @p2
+WHERE [ID] = @p3;
+SELECT @@ROWCOUNT;
+2022-03-15 10:38:53.221 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 10:38:53.245 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:38:53.300 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:38:53.309 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:38:53.318 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.RemoveProductInCart (EcommAppAPI) in 2451.2759ms
+2022-03-15 10:38:53.318 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.RemoveProductInCart (EcommAppAPI)'
+2022-03-15 10:38:53.324 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/RemoveFromCart - 0 - 200 - application/json;+charset=utf-8 2501.8776ms
+2022-03-15 10:39:01.638 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:39:01.642 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:39:01.645 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:39:01.664 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:39:01.667 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:39:01.671 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:39:01.674 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:39:01.676 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:39:01.682 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 36.8006ms
+2022-03-15 10:39:01.683 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:39:01.683 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 45.1258ms
+2022-03-15 10:39:29.921 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/RemoveFromCart - 0
+2022-03-15 10:39:29.922 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.RemoveProductInCart (EcommAppAPI)'
+2022-03-15 10:39:29.923 +05:30 [INF] Route matched with {action = "RemoveProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage RemoveProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:39:29.935 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:39:29.996 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:39:29.997 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:39:29.998 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:39:29.999 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:39:30.009 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:39:30.012 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:39:30.012 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:39:30.012 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.RemoveProductInCart (EcommAppAPI) in 88.8206ms
+2022-03-15 10:39:30.012 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.RemoveProductInCart (EcommAppAPI)'
+2022-03-15 10:39:30.012 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/RemoveFromCart - 0 - 200 - application/json;+charset=utf-8 91.4101ms
+2022-03-15 10:39:37.521 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:39:37.521 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:39:37.521 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:39:37.524 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:39:37.524 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:39:37.529 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:39:37.535 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:39:37.536 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:39:37.536 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 15.1816ms
+2022-03-15 10:39:37.536 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:39:37.536 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 15.8494ms
+2022-03-15 10:40:03.733 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:40:03.737 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:40:03.738 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:40:03.739 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:40:03.742 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:40:03.743 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:40:03.744 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:40:03.746 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:40:03.780 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 10:40:03.790 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Cart Products] ([Count], [CartId], [ProductId])
+VALUES (@p0, @p1, @p2);
+SELECT [ID]
+FROM [Cart Products]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2022-03-15 10:40:03.811 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 10:40:03.819 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:03.820 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:03.820 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:40:03.820 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 81.2966ms
+2022-03-15 10:40:03.820 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:40:03.820 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 88.6154ms
+2022-03-15 10:40:10.686 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:40:10.686 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:40:10.686 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:40:10.687 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:40:10.688 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:40:10.695 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:10.697 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:10.697 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:40:10.698 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 11.191ms
+2022-03-15 10:40:10.698 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:40:10.698 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 12.0787ms
+2022-03-15 10:40:19.570 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:40:19.570 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:40:19.570 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:40:19.571 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:40:19.571 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:40:19.573 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:40:19.576 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:40:19.577 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:19.579 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:19.579 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:40:19.579 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 8.7081ms
+2022-03-15 10:40:19.579 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:40:19.579 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 9.4835ms
+2022-03-15 10:40:23.666 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:40:23.667 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:40:23.667 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:40:23.667 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:40:23.668 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:40:23.669 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:23.671 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:23.671 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:40:23.672 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 4.5306ms
+2022-03-15 10:40:23.672 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:40:23.672 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 5.3872ms
+2022-03-15 10:40:40.353 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:40:40.353 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:40:40.353 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:40:40.354 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:40:40.354 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:40:40.355 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:40:40.356 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:40:40.357 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:40:40.359 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 10:40:40.360 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Cart Products] ([Count], [CartId], [ProductId])
+VALUES (@p0, @p1, @p2);
+SELECT [ID]
+FROM [Cart Products]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2022-03-15 10:40:40.363 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 10:40:40.364 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:40.365 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:40.365 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:40:40.366 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 12.6378ms
+2022-03-15 10:40:40.366 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:40:40.366 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 13.2288ms
+2022-03-15 10:40:44.942 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:40:44.945 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:40:44.946 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:40:44.947 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:40:44.948 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:40:44.950 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:44.970 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:40:44.971 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:40:44.971 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 24.4165ms
+2022-03-15 10:40:44.971 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:40:44.971 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 29.3191ms
+2022-03-15 10:45:24.079 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 10:45:24.189 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 10:45:24.189 +05:30 [INF] Hosting environment: Development
+2022-03-15 10:45:24.190 +05:30 [INF] Content root path: C:\Users\ishsandh\Downloads\FinalMockProject\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 10:45:25.689 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 10:45:26.333 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 651.8997ms
+2022-03-15 10:45:26.392 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 10:45:26.395 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 2.8885ms
+2022-03-15 10:45:26.701 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 10:45:27.080 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 379.2044ms
+2022-03-15 10:45:37.058 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:45:37.077 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:45:37.109 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:45:37.348 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:45:38.380 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:45:39.250 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:45:39.378 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:45:39.387 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:45:39.400 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 2282.7407ms
+2022-03-15 10:45:39.401 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:45:39.406 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 2348.3841ms
+2022-03-15 10:45:55.934 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:45:55.938 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:45:55.940 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:45:55.954 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:45:55.958 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:45:55.963 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:45:55.968 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:45:55.998 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:45:56.161 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 10:45:56.170 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Cart Products] ([Count], [CartId], [ProductId])
+VALUES (@p0, @p1, @p2);
+SELECT [ID]
+FROM [Cart Products]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2022-03-15 10:45:56.198 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 10:45:56.217 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:45:56.220 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:45:56.221 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:45:56.222 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 281.0323ms
+2022-03-15 10:45:56.222 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:45:56.222 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 288.0490ms
+2022-03-15 10:46:01.234 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:46:01.235 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:46:01.235 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:46:01.242 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:46:01.322 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:46:01.324 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:01.325 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:01.326 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:46:01.328 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 93.0891ms
+2022-03-15 10:46:01.328 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:46:01.328 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 94.5647ms
+2022-03-15 10:46:21.437 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:46:21.440 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:46:21.444 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:46:21.447 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:46:21.448 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:46:21.449 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:46:21.454 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:46:21.454 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:46:21.459 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 10:46:21.459 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart Products] SET [Count] = @p0, [CartId] = @p1, [ProductId] = @p2
+WHERE [ID] = @p3;
+SELECT @@ROWCOUNT;
+2022-03-15 10:46:21.460 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 10:46:21.466 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:21.469 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:21.470 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:46:21.471 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 24.2414ms
+2022-03-15 10:46:21.471 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:46:21.471 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 33.8560ms
+2022-03-15 10:46:26.729 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:46:26.729 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:46:26.729 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:46:26.729 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:46:26.730 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:46:26.732 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:26.734 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:26.734 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:46:26.735 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 5.5619ms
+2022-03-15 10:46:26.735 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:46:26.735 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 6.3538ms
+2022-03-15 10:46:37.002 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0
+2022-03-15 10:46:37.002 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:46:37.002 +05:30 [INF] Route matched with {action = "AddProductInCart", controller = "Cart"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddProductInCart(Int32, Int32, Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:46:37.003 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:46:37.004 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:46:37.006 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__userid_0
+2022-03-15 10:46:37.006 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryId], [p].[Count], [p].[Description], [p].[Name], [p].[Price]
+FROM [Product] AS [p]
+WHERE [p].[ID] = @__productid_0
+2022-03-15 10:46:37.007 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__productid_0='?' (DbType = Int32), @__cart_CartId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Count], [c].[CartId], [c].[ProductId]
+FROM [Cart Products] AS [c]
+WHERE ([c].[ProductId] = @__productid_0) AND ([c].[CartId] = @__cart_CartId_1)
+2022-03-15 10:46:37.008 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Single), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cart] SET [Price] = @p0, [UserId] = @p1
+WHERE [ID] = @p2;
+SELECT @@ROWCOUNT;
+2022-03-15 10:46:37.009 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Cart Products] ([Count], [CartId], [ProductId])
+VALUES (@p0, @p1, @p2);
+SELECT [ID]
+FROM [Cart Products]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2022-03-15 10:46:37.010 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 300), @p3='?' (Size = 100), @p4='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CategoryId] = @p0, [Count] = @p1, [Description] = @p2, [Name] = @p3, [Price] = @p4
+WHERE [ID] = @p5;
+SELECT @@ROWCOUNT;
+2022-03-15 10:46:37.016 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:37.018 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:37.018 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-15 10:46:37.018 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI) in 15.9107ms
+2022-03-15 10:46:37.018 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.AddProductInCart (EcommAppAPI)'
+2022-03-15 10:46:37.018 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Cart/AddToCart - 0 - 200 - application/json;+charset=utf-8 16.6042ms
+2022-03-15 10:46:42.120 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - -
+2022-03-15 10:46:42.120 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:46:42.120 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Cart"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.CartController (EcommAppAPI).
+2022-03-15 10:46:42.121 +05:30 [INF] CartController Excuting ....
+2022-03-15 10:46:42.122 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 10:46:42.123 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:42.125 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 10:46:42.125 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 10:46:42.126 +05:30 [INF] Executed action EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI) in 5.4253ms
+2022-03-15 10:46:42.126 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.CartController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 10:46:42.126 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Cart/GetCartById - - - 200 - application/json;+charset=utf-8 6.2330ms
+>>>>>>> ede7160f02819b8a2908022cbc70ad364fdd3b4b
+2022-03-15 11:28:33.735 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 11:29:26.320 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 11:29:44.941 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 11:32:40.972 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 11:32:43.379 +05:30 [INF] Executed DbCommand (289ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-15 11:32:43.678 +05:30 [INF] Executed DbCommand (284ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-15 11:32:43.958 +05:30 [INF] Executed DbCommand (279ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-15 11:32:44.413 +05:30 [INF] Executed DbCommand (305ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-03-15 11:32:44.680 +05:30 [INF] Executed DbCommand (263ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-15 11:32:44.946 +05:30 [INF] Executed DbCommand (265ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-15 11:32:45.248 +05:30 [INF] Executed DbCommand (300ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-03-15 11:32:45.271 +05:30 [INF] Applying migration '20220315055926_initial'.
+2022-03-15 11:32:45.921 +05:30 [INF] Executed DbCommand (270ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Category] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Date of Creation] nvarchar(max) NULL,
+    CONSTRAINT [PK_Category] PRIMARY KEY ([ID])
+);
+2022-03-15 11:32:46.189 +05:30 [INF] Executed DbCommand (266ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [City] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_City] PRIMARY KEY ([ID])
+);
+2022-03-15 11:32:46.471 +05:30 [INF] Executed DbCommand (282ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Specifications] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Details] nvarchar(100) NULL,
+    CONSTRAINT [PK_Specifications] PRIMARY KEY ([ID])
+);
+2022-03-15 11:32:46.753 +05:30 [INF] Executed DbCommand (281ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [State] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    CONSTRAINT [PK_State] PRIMARY KEY ([ID])
+);
+2022-03-15 11:32:47.022 +05:30 [INF] Executed DbCommand (269ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [ID] int NOT NULL IDENTITY,
+    [First Name] nvarchar(30) NOT NULL,
+    [Last Name] nvarchar(30) NULL,
+    [Contact] nvarchar(10) NOT NULL,
+    [Email ID] nvarchar(254) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([ID])
+);
+2022-03-15 11:32:47.312 +05:30 [INF] Executed DbCommand (289ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product] (
+    [ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(300) NULL,
+    [Price] real NOT NULL,
+    [Count] int NOT NULL,
+    [CategoryId] int NULL,
+    CONSTRAINT [PK_Product] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([ID])
+);
+2022-03-15 11:32:47.592 +05:30 [INF] Executed DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [ID] int NOT NULL IDENTITY,
+    [House Number] int NOT NULL,
+    [Building Name] nvarchar(50) NOT NULL,
+    [AreaOrColony Name] nvarchar(100) NOT NULL,
+    [Type] nvarchar(10) NULL,
+    [Pincode] int NOT NULL,
+    [CityId] int NULL,
+    [StateId] int NULL,
+    [UserId] int NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Address_City_CityId] FOREIGN KEY ([CityId]) REFERENCES [City] ([ID]),
+    CONSTRAINT [FK_Address_State_StateId] FOREIGN KEY ([StateId]) REFERENCES [State] ([ID]),
+    CONSTRAINT [FK_Address_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-15 11:32:47.873 +05:30 [INF] Executed DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart] (
+    [ID] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [Price] real NOT NULL,
+    CONSTRAINT [PK_Cart] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-15 11:32:48.155 +05:30 [INF] Executed DbCommand (281ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [ProductId] int NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [Date of Comment] nvarchar(max) NULL,
+    [ParentCommentId] int NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-15 11:32:48.455 +05:30 [INF] Executed DbCommand (299ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Product Specification] (
+    [ID] int NOT NULL IDENTITY,
+    [SpecificationId] int NULL,
+    [ProductId] int NULL,
+    CONSTRAINT [PK_Product Specification] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Product Specification_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Product Specification_Specifications_SpecificationId] FOREIGN KEY ([SpecificationId]) REFERENCES [Specifications] ([ID])
+);
+2022-03-15 11:32:48.739 +05:30 [INF] Executed DbCommand (283ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cart Products] (
+    [ID] int NOT NULL IDENTITY,
+    [CartId] int NULL,
+    [ProductId] int NOT NULL,
+    [Count] int NOT NULL,
+    CONSTRAINT [PK_Cart Products] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Cart Products_Cart_CartId] FOREIGN KEY ([CartId]) REFERENCES [Cart] ([ID]),
+    CONSTRAINT [FK_Cart Products_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]) ON DELETE CASCADE
+);
+2022-03-15 11:32:49.023 +05:30 [INF] Executed DbCommand (284ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Order] (
+    [ID] int NOT NULL IDENTITY,
+    [OrderDate] datetime2 NOT NULL,
+    [CartId] int NULL,
+    [AddressId] int NULL,
+    [UserId] int NULL,
+    [OrderPrice] real NOT NULL,
+    CONSTRAINT [PK_Order] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Order_Address_AddressId] FOREIGN KEY ([AddressId]) REFERENCES [Address] ([ID]),
+    CONSTRAINT [FK_Order_Cart_CartId] FOREIGN KEY ([CartId]) REFERENCES [Cart] ([ID]),
+    CONSTRAINT [FK_Order_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-15 11:32:49.312 +05:30 [INF] Executed DbCommand (289ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Payment] (
+    [ID] int NOT NULL IDENTITY,
+    [OrderId] int NULL,
+    [Mode] nvarchar(20) NOT NULL,
+    [Status] nvarchar(30) NOT NULL,
+    [Paid] float NOT NULL,
+    [Balance] float NOT NULL,
+    CONSTRAINT [PK_Payment] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_Payment_Order_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Order] ([ID])
+);
+2022-03-15 11:32:49.587 +05:30 [INF] Executed DbCommand (274ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_CityId] ON [Address] ([CityId]);
+2022-03-15 11:32:49.868 +05:30 [INF] Executed DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_StateId] ON [Address] ([StateId]);
+2022-03-15 11:32:50.138 +05:30 [INF] Executed DbCommand (270ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Address_UserId] ON [Address] ([UserId]);
+2022-03-15 11:32:50.418 +05:30 [INF] Executed DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart_UserId] ON [Cart] ([UserId]);
+2022-03-15 11:32:50.702 +05:30 [INF] Executed DbCommand (283ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart Products_CartId] ON [Cart Products] ([CartId]);
+2022-03-15 11:32:50.979 +05:30 [INF] Executed DbCommand (276ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Cart Products_ProductId] ON [Cart Products] ([ProductId]);
+2022-03-15 11:32:51.291 +05:30 [INF] Executed DbCommand (311ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_ProductId] ON [Comments] ([ProductId]);
+2022-03-15 11:32:51.571 +05:30 [INF] Executed DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_UserId] ON [Comments] ([UserId]);
+2022-03-15 11:32:51.838 +05:30 [INF] Executed DbCommand (266ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_AddressId] ON [Order] ([AddressId]);
+2022-03-15 11:32:52.107 +05:30 [INF] Executed DbCommand (269ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_CartId] ON [Order] ([CartId]);
+2022-03-15 11:32:52.382 +05:30 [INF] Executed DbCommand (275ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Order_UserId] ON [Order] ([UserId]);
+2022-03-15 11:32:52.652 +05:30 [INF] Executed DbCommand (269ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Payment_OrderId] ON [Payment] ([OrderId]);
+2022-03-15 11:32:52.922 +05:30 [INF] Executed DbCommand (270ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product_CategoryId] ON [Product] ([CategoryId]);
+2022-03-15 11:32:53.214 +05:30 [INF] Executed DbCommand (291ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product Specification_ProductId] ON [Product Specification] ([ProductId]);
+2022-03-15 11:32:53.491 +05:30 [INF] Executed DbCommand (277ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Product Specification_SpecificationId] ON [Product Specification] ([SpecificationId]);
+2022-03-15 11:32:53.771 +05:30 [INF] Executed DbCommand (279ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220315055926_initial', N'6.0.2');
+2022-03-15 12:12:31.680 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 12:12:31.762 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 12:12:31.762 +05:30 [INF] Hosting environment: Development
+2022-03-15 12:12:31.762 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 12:12:35.316 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 12:12:36.110 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 818.9083ms
+2022-03-15 12:12:36.160 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 12:12:36.216 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 56.2719ms
+2022-03-15 12:12:36.672 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 12:12:37.114 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 441.9864ms
+2022-03-15 12:12:59.720 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Product - -
+2022-03-15 12:12:59.730 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI)'
+2022-03-15 12:12:59.773 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Product"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[EcommAppBLL.ModelViews.ProductView] GetAllProducts() on controller EcommAppAPI.Controllers.ProductController (EcommAppAPI).
+2022-03-15 12:13:00.193 +05:30 [INF] ProductController Excuting ....
+2022-03-15 12:13:01.966 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 12:13:05.242 +05:30 [INF] Executed DbCommand (309ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ID] AS [ProductId], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Count] AS [ProductCount], [p].[Price] AS [ProductPrice], [p].[CategoryId]
+FROM [Product] AS [p]
+2022-03-15 12:13:05.303 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.ProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-15 12:13:05.319 +05:30 [INF] Executed action EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI) in 5539.7149ms
+2022-03-15 12:13:05.320 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI)'
+2022-03-15 12:13:05.326 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Product - - - 200 - application/json;+charset=utf-8 5606.5638ms
+2022-03-15 15:01:11.452 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 15:01:11.543 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 15:01:11.543 +05:30 [INF] Hosting environment: Development
+2022-03-15 15:01:11.543 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 15:01:14.391 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 15:01:16.432 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 2049.8804ms
+2022-03-15 15:01:16.961 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 15:01:17.007 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 46.4318ms
+2022-03-15 15:01:17.526 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 15:01:18.363 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 837.2782ms
+2022-03-15 15:01:43.328 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Users/OrderByOrderId - -
+2022-03-15 15:01:43.404 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.UsersController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-15 15:01:43.468 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Users"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.OrderView],System.Single] GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.UsersController (EcommAppAPI).
+2022-03-15 15:01:44.486 +05:30 [INF] OrderController Excuting ....
+2022-03-15 15:02:05.938 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 15:02:11.242 +05:30 [INF] Executed DbCommand (455ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[OrderPrice], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-15 15:02:11.798 +05:30 [INF] Executed DbCommand (306ms) [Parameters=[@__order_CartId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[ID] = @__order_CartId_0
+2022-03-15 15:02:26.801 +05:30 [INF] Executed DbCommand (428ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[ID] AS [OrderId], [o].[OrderDate], [p].[Name] AS [ProductName], [c].[Count] AS [ProductCount]
+FROM [Order] AS [o]
+INNER JOIN [Cart Products] AS [c] ON [o].[CartId] = [c].[CartId]
+INNER JOIN [Product] AS [p] ON [c].[ProductId] = [p].[ID]
+WHERE [o].[ID] = @__id_0
+2022-03-15 15:03:42.646 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.OrderView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 15:03:50.661 +05:30 [INF] Executed action EcommAppAPI.Controllers.UsersController.GetItemsByOrderID (EcommAppAPI) in 127162.7761ms
+2022-03-15 15:03:50.662 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.UsersController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-15 15:03:50.680 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Users/OrderByOrderId - - - 200 - application/json;+charset=utf-8 127354.9370ms
+2022-03-15 15:05:02.325 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 15:05:02.531 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 15:05:02.534 +05:30 [INF] Hosting environment: Development
+2022-03-15 15:05:02.534 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 15:05:06.191 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 15:05:08.263 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 2090.6790ms
+2022-03-15 15:05:08.488 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 15:05:08.492 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 4.1913ms
+2022-03-15 15:05:09.090 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 15:05:09.807 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 716.6636ms
+2022-03-15 15:05:23.331 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Users/OrderByOrderId - -
+2022-03-15 15:05:23.354 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.UsersController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-15 15:05:23.489 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Users"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.OrderView],System.Single] GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.UsersController (EcommAppAPI).
+2022-03-15 15:05:24.510 +05:30 [INF] OrderController Excuting ....
+2022-03-15 15:05:27.151 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 15:05:33.723 +05:30 [INF] Executed DbCommand (604ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[OrderPrice], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-15 15:05:34.583 +05:30 [INF] Executed DbCommand (573ms) [Parameters=[@__order_CartId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[ID] = @__order_CartId_0
+2022-03-15 15:05:35.013 +05:30 [INF] Executed DbCommand (294ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[ID] AS [OrderId], [o].[OrderDate], [p].[Name] AS [ProductName], [c].[Count] AS [ProductCount]
+FROM [Order] AS [o]
+INNER JOIN [Cart Products] AS [c] ON [o].[CartId] = [c].[CartId]
+INNER JOIN [Product] AS [p] ON [c].[ProductId] = [p].[ID]
+WHERE [o].[ID] = @__id_0
+2022-03-15 15:05:35.035 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.OrderView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 15:05:35.065 +05:30 [INF] Executed action EcommAppAPI.Controllers.UsersController.GetItemsByOrderID (EcommAppAPI) in 11562.0167ms
+2022-03-15 15:05:35.066 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.UsersController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-15 15:05:35.086 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Users/OrderByOrderId - - - 200 - application/json;+charset=utf-8 11755.6760ms
+2022-03-15 15:12:09.821 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-15 15:12:10.033 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 15:12:10.037 +05:30 [INF] Hosting environment: Development
+2022-03-15 15:12:10.037 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-15 15:12:13.648 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-15 15:12:15.453 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1812.1081ms
+2022-03-15 15:12:15.552 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-15 15:12:15.775 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 222.8472ms
+2022-03-15 15:12:16.249 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-15 15:12:16.918 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 668.3974ms
+2022-03-15 15:12:31.688 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Users/CartByUserId - -
+2022-03-15 15:12:31.715 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.UsersController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 15:12:31.793 +05:30 [INF] Route matched with {action = "GetCartItemsyByUserID", controller = "Users"}. Executing controller action with signature System.Tuple`2[System.Collections.Generic.List`1[EcommAppBLL.ModelViews.CartProductView],System.Single] GetCartItemsyByUserID(Int32) on controller EcommAppAPI.Controllers.UsersController (EcommAppAPI).
+2022-03-15 15:12:32.571 +05:30 [INF] CartController Excuting ....
+2022-03-15 15:12:35.038 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-15 15:12:40.269 +05:30 [INF] Executed DbCommand (571ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Price], [c].[UserId]
+FROM [Cart] AS [c]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 15:12:41.197 +05:30 [INF] Executed DbCommand (502ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ProductId], [c0].[Count] AS [CartCount], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Price] * CAST([c0].[Count] AS real) AS [ProductPrice]
+FROM [Cart] AS [c]
+INNER JOIN [Cart Products] AS [c0] ON [c].[ID] = [c0].[CartId]
+INNER JOIN [Product] AS [p] ON [c0].[ProductId] = [p].[ID]
+WHERE [c].[UserId] = @__id_0
+2022-03-15 15:12:41.219 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Tuple`2[[System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.CartProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-03-15 15:12:41.249 +05:30 [INF] Executed action EcommAppAPI.Controllers.UsersController.GetCartItemsyByUserID (EcommAppAPI) in 9432.4268ms
+2022-03-15 15:12:41.250 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.UsersController.GetCartItemsyByUserID (EcommAppAPI)'
+2022-03-15 15:12:41.262 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Users/CartByUserId - - - 200 - application/json;+charset=utf-8 9573.6927ms

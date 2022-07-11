@@ -1,0 +1,433 @@
+2022-03-11 11:04:45.231 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 11:04:45.453 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 11:04:45.455 +05:30 [INF] Hosting environment: Development
+2022-03-11 11:04:45.456 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 11:04:50.111 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 11:04:51.507 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1394.4747ms
+2022-03-11 11:04:51.823 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 11:04:51.826 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 3.0300ms
+2022-03-11 11:04:52.183 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 11:04:52.685 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 502.0351ms
+2022-03-11 11:05:02.720 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Product - -
+2022-03-11 11:05:02.740 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI)'
+2022-03-11 11:05:02.774 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Product"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[EcommAppBLL.ModelViews.ProductView] GetAllProducts() on controller EcommAppAPI.Controllers.ProductController (EcommAppAPI).
+2022-03-11 11:05:03.146 +05:30 [INF] ProductController Excuting ....
+2022-03-11 11:05:04.648 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 11:05:05.895 +05:30 [INF] Executed DbCommand (83ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ID] AS [ProductId], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Count] AS [ProductCount], [p].[Price] AS [ProductPrice], [p].[CategoryId]
+FROM [Product] AS [p]
+2022-03-11 11:05:05.989 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.ProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-11 11:05:06.020 +05:30 [INF] Executed action EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI) in 3224.555ms
+2022-03-11 11:05:06.021 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI)'
+2022-03-11 11:05:06.047 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Product - - - 200 - application/json;+charset=utf-8 3326.5707ms
+2022-03-11 13:15:49.214 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:15:49.276 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:15:49.277 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:15:49.277 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:15:53.291 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:15:53.860 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 577.1252ms
+2022-03-11 13:15:53.911 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:15:53.916 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 4.0563ms
+2022-03-11 13:15:54.245 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:15:54.524 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 279.6905ms
+2022-03-11 13:16:01.005 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Product/ProductSpecification - -
+2022-03-11 13:16:01.033 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI)'
+2022-03-11 13:16:01.047 +05:30 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[EcommAppBLL.ModelViews.ProductSpecificationView] GetAll() on controller EcommAppAPI.Controllers.ProductController (EcommAppAPI).
+2022-03-11 13:16:01.547 +05:30 [INF] ProductController Excuting ....
+2022-03-11 13:16:02.730 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:16:03.726 +05:30 [INF] Executed DbCommand (105ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[SpecificationId], (
+    SELECT TOP(1) [p0].[Name]
+    FROM [Product] AS [p0]
+    WHERE [p0].[ID] = [p].[ProductId]) AS [ProductName], (
+    SELECT TOP(1) [s].[Name]
+    FROM [Specifications] AS [s]
+    WHERE [s].[ID] = [p].[SpecificationId]) AS [SpecificationName], (
+    SELECT TOP(1) [s0].[Details]
+    FROM [Specifications] AS [s0]
+    WHERE [s0].[ID] = [p].[SpecificationId]) AS [SpecificationDetail]
+FROM [Product Specification] AS [p]
+2022-03-11 13:16:03.784 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.ProductSpecificationView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-11 13:16:03.794 +05:30 [INF] Executed action EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI) in 2740.8778ms
+2022-03-11 13:16:03.795 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI)'
+2022-03-11 13:16:03.801 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Product/ProductSpecification - - - 200 - application/json;+charset=utf-8 2796.2169ms
+2022-03-11 13:17:50.460 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:17:50.514 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:17:50.514 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:17:50.514 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:17:54.016 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:17:54.541 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 532.2855ms
+2022-03-11 13:17:54.605 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:17:54.608 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 2.8644ms
+2022-03-11 13:17:54.912 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:17:55.066 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 153.8762ms
+2022-03-11 13:18:02.197 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Product/ProductSpecification - -
+2022-03-11 13:18:02.210 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI)'
+2022-03-11 13:18:02.227 +05:30 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[EcommAppBLL.ModelViews.ProductSpecificationView] GetAll() on controller EcommAppAPI.Controllers.ProductController (EcommAppAPI).
+2022-03-11 13:18:02.476 +05:30 [INF] ProductController Excuting ....
+2022-03-11 13:18:03.578 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:18:04.601 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[SpecificationId], (
+    SELECT TOP(1) [p0].[Name]
+    FROM [Product] AS [p0]
+    WHERE [p0].[ID] = [p].[ProductId]) AS [ProductName], (
+    SELECT TOP(1) [s].[Name]
+    FROM [Specifications] AS [s]
+    WHERE [s].[ID] = [p].[SpecificationId]) AS [SpecificationName], (
+    SELECT TOP(1) [s0].[Details]
+    FROM [Specifications] AS [s0]
+    WHERE [s0].[ID] = [p].[SpecificationId]) AS [SpecificationDetail]
+FROM [Product Specification] AS [p]
+2022-03-11 13:18:04.634 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.ProductSpecificationView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-11 13:18:04.645 +05:30 [INF] Executed action EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI) in 2411.5374ms
+2022-03-11 13:18:04.645 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.ProductController.GetAll (EcommAppAPI)'
+2022-03-11 13:18:04.651 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Product/ProductSpecification - - - 200 - application/json;+charset=utf-8 2454.2366ms
+2022-03-11 13:18:10.557 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Product - -
+2022-03-11 13:18:10.560 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI)'
+2022-03-11 13:18:10.561 +05:30 [INF] Route matched with {action = "GetAllProducts", controller = "Product"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[EcommAppBLL.ModelViews.ProductView] GetAllProducts() on controller EcommAppAPI.Controllers.ProductController (EcommAppAPI).
+2022-03-11 13:18:10.572 +05:30 [INF] ProductController Excuting ....
+2022-03-11 13:18:10.580 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:18:10.591 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ID] AS [ProductId], [p].[Name] AS [ProductName], [p].[Description] AS [ProductDescription], [p].[Count] AS [ProductCount], [p].[Price] AS [ProductPrice], [p].[CategoryId]
+FROM [Product] AS [p]
+2022-03-11 13:18:10.592 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppBLL.ModelViews.ProductView, EcommAppBLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-11 13:18:10.595 +05:30 [INF] Executed action EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI) in 33.3038ms
+2022-03-11 13:18:10.595 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.ProductController.GetAllProducts (EcommAppAPI)'
+2022-03-11 13:18:10.595 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Product - - - 200 - application/json;+charset=utf-8 37.9468ms
+2022-03-11 13:31:13.864 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:31:13.976 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:31:13.977 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:31:13.977 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:31:19.470 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:31:23.136 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 3672.0182ms
+2022-03-11 13:31:23.243 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:31:23.299 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 55.1291ms
+2022-03-11 13:31:24.047 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:31:24.626 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 579.1124ms
+2022-03-11 13:31:32.861 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/User - -
+2022-03-11 13:31:32.887 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.UserController.GetAllUsers (EcommAppAPI)'
+2022-03-11 13:31:32.913 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[EcommAppDAL.Models.User] GetAllUsers() on controller EcommAppAPI.Controllers.UserController (EcommAppAPI).
+2022-03-11 13:31:33.506 +05:30 [INF] UserController Excuting ....
+2022-03-11 13:31:35.967 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:31:37.844 +05:30 [INF] Executed DbCommand (120ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[ID], [u].[Contact], [u].[Email ID], [u].[First Name], [u].[Last Name]
+FROM [Users] AS [u]
+2022-03-11 13:31:38.086 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EcommAppDAL.Models.User, EcommAppDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-11 13:31:38.116 +05:30 [INF] Executed action EcommAppAPI.Controllers.UserController.GetAllUsers (EcommAppAPI) in 5180.5445ms
+2022-03-11 13:31:38.119 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.UserController.GetAllUsers (EcommAppAPI)'
+2022-03-11 13:31:38.138 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/User - - - 200 - application/json;+charset=utf-8 5277.1999ms
+2022-03-11 13:31:49.653 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/User/byID - -
+2022-03-11 13:31:49.657 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.UserController.GetUserByID (EcommAppAPI)'
+2022-03-11 13:31:49.691 +05:30 [INF] Route matched with {action = "GetUserByID", controller = "User"}. Executing controller action with signature EcommAppDAL.Models.User GetUserByID(Int32) on controller EcommAppAPI.Controllers.UserController (EcommAppAPI).
+2022-03-11 13:31:49.760 +05:30 [INF] UserController Excuting ....
+2022-03-11 13:31:49.769 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:31:50.098 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[Contact], [u].[Email ID], [u].[First Name], [u].[Last Name]
+FROM [Users] AS [u]
+WHERE [u].[ID] = @__p_0
+2022-03-11 13:31:50.102 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppDAL.Models.User'.
+2022-03-11 13:31:50.103 +05:30 [INF] Executed action EcommAppAPI.Controllers.UserController.GetUserByID (EcommAppAPI) in 411.922ms
+2022-03-11 13:31:50.103 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.UserController.GetUserByID (EcommAppAPI)'
+2022-03-11 13:31:50.103 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/User/byID - - - 200 - application/json;+charset=utf-8 450.3762ms
+2022-03-11 13:39:13.445 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:39:13.559 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:39:13.560 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:39:13.560 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:39:18.280 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:39:19.745 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1468.8755ms
+2022-03-11 13:39:19.795 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:39:19.843 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 48.3959ms
+2022-03-11 13:39:20.748 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:39:21.630 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 882.4695ms
+2022-03-11 13:40:15.248 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:40:26.815 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:41:28.150 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:41:28.220 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:41:28.223 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:41:28.223 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:41:32.981 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:41:34.054 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1104.9435ms
+2022-03-11 13:41:34.087 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:41:34.251 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 164.0979ms
+2022-03-11 13:41:55.810 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:41:56.573 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-11 13:41:56.670 +05:30 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-11 13:41:56.676 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-03-11 13:41:56.677 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-03-11 13:41:56.743 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-03-11 13:41:56.777 +05:30 [INF] Applying migration '20220311050026_NewOneForOrder'.
+2022-03-11 13:41:57.058 +05:30 [INF] Executed DbCommand (113ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Cart Products] DROP CONSTRAINT [FK_Cart Products_Product_ProductId];
+2022-03-11 13:41:57.078 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Order] DROP CONSTRAINT [FK_Order_Cart Products_CartProductId];
+2022-03-11 13:41:57.933 +05:30 [INF] Executed DbCommand (855ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Order].[CartProductId]', N'UserId', N'COLUMN';
+2022-03-11 13:41:57.936 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Order].[IX_Order_CartProductId]', N'IX_Order_UserId', N'INDEX';
+2022-03-11 13:41:58.178 +05:30 [INF] Executed DbCommand (242ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Order]') AND [c].[name] = N'OrderDate');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Order] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Order] ALTER COLUMN [OrderDate] datetime2 NOT NULL;
+ALTER TABLE [Order] ADD DEFAULT '0001-01-01T00:00:00.0000000' FOR [OrderDate];
+2022-03-11 13:41:58.483 +05:30 [INF] Executed DbCommand (304ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX [IX_Cart Products_ProductId] ON [Cart Products];
+DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Cart Products]') AND [c].[name] = N'ProductId');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [Cart Products] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [Cart Products] ALTER COLUMN [ProductId] int NOT NULL;
+ALTER TABLE [Cart Products] ADD DEFAULT 0 FOR [ProductId];
+CREATE INDEX [IX_Cart Products_ProductId] ON [Cart Products] ([ProductId]);
+2022-03-11 13:41:58.518 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Cart Products] ADD CONSTRAINT [FK_Cart Products_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]) ON DELETE CASCADE;
+2022-03-11 13:41:58.522 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Order] ADD CONSTRAINT [FK_Order_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID]);
+2022-03-11 13:41:58.524 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220311050026_NewOneForOrder', N'6.0.2');
+2022-03-11 13:41:58.532 +05:30 [INF] Applying migration '20220311081027_migrationn'.
+2022-03-11 13:41:58.588 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NULL,
+    [ProductId] int NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [Date of Comment] nvarchar(max) NULL,
+    [ParentCommentId] int NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ID]),
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([ID])
+);
+2022-03-11 13:41:58.590 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_ProductId] ON [Comments] ([ProductId]);
+2022-03-11 13:41:58.591 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_UserId] ON [Comments] ([UserId]);
+2022-03-11 13:41:58.592 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220311081027_migrationn', N'6.0.2');
+2022-03-11 13:42:11.511 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:42:11.650 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:42:11.651 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:42:11.651 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:42:16.597 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:42:17.646 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1060.0753ms
+2022-03-11 13:42:17.729 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:42:17.735 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 5.9158ms
+2022-03-11 13:42:18.196 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:42:18.838 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 641.2155ms
+2022-03-11 13:42:35.460 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - -
+2022-03-11 13:42:35.521 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:42:35.587 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Order"}. Executing controller action with signature System.Object GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 13:42:35.651 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI) in 38.3239ms
+2022-03-11 13:42:35.653 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:42:35.665 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'EcommAppBLL.Repository.Orders.IOrderRepository' while attempting to activate 'EcommAppAPI.Controllers.OrderController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-11 13:42:35.768 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - - - 500 - text/plain;+charset=utf-8 307.6615ms
+2022-03-11 13:44:19.723 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:44:19.834 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:44:19.835 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:44:19.835 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:44:27.311 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:44:28.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 896.1677ms
+2022-03-11 13:44:28.310 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:44:28.315 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 4.2351ms
+2022-03-11 13:44:29.284 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:44:29.712 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 428.6392ms
+2022-03-11 13:44:37.379 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - -
+2022-03-11 13:44:37.408 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:44:37.496 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Order"}. Executing controller action with signature System.Object GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 13:44:40.163 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:44:41.594 +05:30 [INF] Executed DbCommand (113ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-11 13:45:53.593 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:45:53.709 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:45:53.710 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:45:53.710 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:45:58.478 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:45:59.354 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 880.8050ms
+2022-03-11 13:45:59.416 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:45:59.489 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 72.5508ms
+2022-03-11 13:45:59.882 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:46:00.536 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 654.5620ms
+2022-03-11 13:46:17.435 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - -
+2022-03-11 13:46:17.451 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:46:17.497 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Order"}. Executing controller action with signature System.Object GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 13:46:19.438 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:46:21.929 +05:30 [INF] Executed DbCommand (80ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-11 13:46:21.966 +05:30 [INF] Executing ObjectResult, writing value of type 'null'.
+2022-03-11 13:46:21.977 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI) in 4468.8732ms
+2022-03-11 13:46:21.978 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:46:21.986 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - - - 204 0 - 4550.6238ms
+2022-03-11 13:48:30.702 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:48:30.792 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:48:30.793 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:48:30.793 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:48:36.008 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:48:37.059 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:48:37.068 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 3.9985ms
+2022-03-11 13:48:37.173 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1185.8244ms
+2022-03-11 13:48:37.745 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:48:38.250 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 500.8314ms
+2022-03-11 13:48:52.539 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0
+2022-03-11 13:48:52.569 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 13:48:52.675 +05:30 [INF] Route matched with {action = "AddOrder", controller = "Order"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddOrder(Int32, Int32, System.Collections.Generic.List`1[System.Int32]) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 13:48:53.255 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-11 13:48:53.272 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI) in 582.4786ms
+2022-03-11 13:48:53.275 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 13:48:53.306 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0 - 200 - application/json;+charset=utf-8 765.0697ms
+2022-03-11 13:49:39.723 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0
+2022-03-11 13:49:39.730 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 13:49:39.730 +05:30 [INF] Route matched with {action = "AddOrder", controller = "Order"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddOrder(Int32, Int32, System.Collections.Generic.List`1[System.Int32]) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 13:49:39.752 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-11 13:49:39.753 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI) in 22.2395ms
+2022-03-11 13:49:39.753 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 13:49:39.753 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0 - 200 - application/json;+charset=utf-8 38.0013ms
+2022-03-11 13:50:22.921 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - -
+2022-03-11 13:50:22.922 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:50:22.931 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Order"}. Executing controller action with signature System.Object GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 13:50:25.379 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:50:27.300 +05:30 [INF] Executed DbCommand (169ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-11 13:50:27.344 +05:30 [INF] Executing ObjectResult, writing value of type 'null'.
+2022-03-11 13:50:27.346 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI) in 4414.7885ms
+2022-03-11 13:50:27.346 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:50:27.353 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - - - 204 0 - 4432.1210ms
+2022-03-11 13:54:01.269 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 13:54:01.380 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 13:54:01.380 +05:30 [INF] Hosting environment: Development
+2022-03-11 13:54:01.381 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 13:54:06.400 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 13:54:07.886 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1501.7712ms
+2022-03-11 13:54:07.934 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 13:54:08.164 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 229.4002ms
+2022-03-11 13:54:08.718 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 13:54:09.350 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 632.1519ms
+2022-03-11 13:54:17.972 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - -
+2022-03-11 13:54:18.005 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:54:18.067 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Order"}. Executing controller action with signature System.Collections.Generic.List`1[EcommAppBLL.ModelViews.OrderView] GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 13:54:20.719 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 13:54:22.315 +05:30 [INF] Executed DbCommand (81ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-11 13:54:22.410 +05:30 [INF] Executing ObjectResult, writing value of type 'null'.
+2022-03-11 13:54:22.421 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI) in 4343.6501ms
+2022-03-11 13:54:22.421 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 13:54:22.430 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - - - 204 0 - 4457.4943ms
+2022-03-11 13:58:52.876 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0
+2022-03-11 13:58:52.886 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 13:58:52.911 +05:30 [INF] Route matched with {action = "AddOrder", controller = "Order"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddOrder(Int32, Int32, System.Collections.Generic.List`1[System.Int32]) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 13:58:52.968 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-11 13:58:52.973 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI) in 61.1112ms
+2022-03-11 13:58:52.973 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 13:58:52.973 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0 - 200 - application/json;+charset=utf-8 97.3620ms
+2022-03-11 14:00:30.697 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 14:00:30.794 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 14:00:30.795 +05:30 [INF] Hosting environment: Development
+2022-03-11 14:00:30.795 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 14:00:36.004 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 14:00:36.969 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 977.1270ms
+2022-03-11 14:00:37.004 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 14:00:37.043 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 39.7785ms
+2022-03-11 14:00:37.705 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 14:00:38.314 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 606.1219ms
+2022-03-11 14:00:53.097 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0
+2022-03-11 14:00:53.120 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 14:00:53.187 +05:30 [INF] Route matched with {action = "AddOrder", controller = "Order"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddOrder(Int32, Int32, System.Collections.Generic.List`1[System.Int32]) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 14:00:53.819 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-11 14:00:53.833 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI) in 636.262ms
+2022-03-11 14:00:53.834 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 14:00:53.839 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0 - 200 - application/json;+charset=utf-8 742.0110ms
+2022-03-11 14:03:09.500 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 14:03:09.637 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 14:03:09.639 +05:30 [INF] Hosting environment: Development
+2022-03-11 14:03:09.639 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 14:03:16.766 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 14:03:18.151 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 14:03:18.161 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 1419.6893ms
+2022-03-11 14:03:18.164 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 12.9841ms
+2022-03-11 14:03:18.910 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 14:03:19.371 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 460.5359ms
+2022-03-11 14:03:32.185 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0
+2022-03-11 14:03:32.226 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 14:03:32.358 +05:30 [INF] Route matched with {action = "AddOrder", controller = "Order"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddOrder(Int32, Int32, System.Collections.Generic.List`1[System.Int32]) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 14:03:32.885 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-11 14:03:32.918 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI) in 532.4447ms
+2022-03-11 14:03:32.920 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 14:03:32.926 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0 - 200 - application/json;+charset=utf-8 740.8999ms
+2022-03-11 14:03:59.444 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - -
+2022-03-11 14:03:59.454 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 14:03:59.456 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Order"}. Executing controller action with signature System.Collections.Generic.List`1[EcommAppBLL.ModelViews.OrderView] GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 14:04:01.242 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 14:04:02.525 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-11 14:04:02.563 +05:30 [INF] Executing ObjectResult, writing value of type 'null'.
+2022-03-11 14:04:02.563 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI) in 3106.3658ms
+2022-03-11 14:04:02.563 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 14:04:02.568 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - - - 204 0 - 3124.2222ms
+2022-03-11 14:05:21.957 +05:30 [INF] Now listening on: http://localhost:5176
+2022-03-11 14:05:22.060 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-11 14:05:22.061 +05:30 [INF] Hosting environment: Development
+2022-03-11 14:05:22.061 +05:30 [INF] Content root path: C:\Users\rajyadav8\Desktop\MockProject\EcommApp\EcommAppAPI\
+2022-03-11 14:05:26.810 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/index.html - -
+2022-03-11 14:05:27.694 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/index.html - - - 200 - text/html;charset=utf-8 896.4420ms
+2022-03-11 14:05:27.769 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - -
+2022-03-11 14:05:27.778 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/_framework/aspnetcore-browser-refresh.js - - - 200 11945 application/javascript;+charset=utf-8 9.0917ms
+2022-03-11 14:05:28.353 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - -
+2022-03-11 14:05:28.763 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 410.3246ms
+2022-03-11 14:05:41.713 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0
+2022-03-11 14:05:41.735 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 14:05:41.824 +05:30 [INF] Route matched with {action = "AddOrder", controller = "Order"}. Executing controller action with signature EcommAppAPI.Response.ResponseMessage AddOrder(Int32, Int32, System.Collections.Generic.List`1[System.Int32]) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 14:05:42.479 +05:30 [INF] Executing ObjectResult, writing value of type 'EcommAppAPI.Response.ResponseMessage'.
+2022-03-11 14:05:42.578 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI) in 679.2788ms
+2022-03-11 14:05:42.602 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.AddOrder (EcommAppAPI)'
+2022-03-11 14:05:42.625 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5176/api/Order/AddOrder - 0 - 200 - application/json;+charset=utf-8 912.4109ms
+2022-03-11 14:05:50.258 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - -
+2022-03-11 14:05:50.266 +05:30 [INF] Executing endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 14:05:50.270 +05:30 [INF] Route matched with {action = "GetItemsByOrderID", controller = "Order"}. Executing controller action with signature System.Collections.Generic.List`1[EcommAppBLL.ModelViews.OrderView] GetItemsByOrderID(Int32) on controller EcommAppAPI.Controllers.OrderController (EcommAppAPI).
+2022-03-11 14:05:53.034 +05:30 [INF] Entity Framework Core 6.0.2 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.2' with options: None
+2022-03-11 14:05:55.234 +05:30 [INF] Executed DbCommand (132ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[AddressId], [o].[CartId], [o].[OrderDate], [o].[UserId]
+FROM [Order] AS [o]
+WHERE [o].[ID] = @__id_0
+2022-03-11 14:05:55.280 +05:30 [INF] Executing ObjectResult, writing value of type 'null'.
+2022-03-11 14:05:55.281 +05:30 [INF] Executed action EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI) in 5006.6354ms
+2022-03-11 14:05:55.281 +05:30 [INF] Executed endpoint 'EcommAppAPI.Controllers.OrderController.GetItemsByOrderID (EcommAppAPI)'
+2022-03-11 14:05:55.289 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5176/api/Order/GetOrderById - - - 204 0 - 5030.8969ms
